@@ -1,0 +1,256 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-zdSLYa6I4yf1G4hiJnhPTePUmK0MWIzZm28S1kp0Yd9Uh++KfUadCrI4B4+CmG0pctNim+GrlNpN+V7q3XJ+Og==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Medical Appointment Scheduling</title>
+    <script>
+      function showInitialMessage() {
+        
+        //Alert used to show a simple message to the user when starting the site 
+        alert("Welcome! Find the best doctors along our website and choose any appoitment you want!");
+      }
+  
+    </script>
+  </head>
+  <body onload=showInitialMessage()>
+    <header>
+      <h1>Schedule Appointment</h1>
+    </header>
+    <div class="page-wrap">
+    <main>
+      <form id="appointment-form">
+        <label for="name">Patient Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+
+        <label for="phone">Telephone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="Enter your telephone" required>
+
+        <label for="doctor">Doctor:</label>
+        <select id="doctor" name="doctor" required>
+          <option value="">Choose a Doctor</option>
+          <option value="dr-smith">Dr. Richie Smith - Surgeon</option>
+          <option value="dr-carlos">Dr. Carlos Vasquéz - General Practitioner</option>
+          <option value="dr-fernanda">Dra. Fernanda Monteiro - Dermatologist</option>
+          <option value="dr-gleyde">Dra. Gleyde Santos - Cardiologist</option>
+        </select>
+
+        <br><br>
+
+  <label for="date">Schedule Date:</label>
+  <input type="date" id="date" name="date" required>
+
+  <br><br>
+
+  <label for="time">Schedule Time:</label>
+  <input type="time" id="time" name="time" required>
+
+  <br><br>
+
+  <label for="consult-type">Appointment Type:</label>
+  <select id="consult-type" name="consult-type">
+    <option value="">Select an appointment option</option>
+    <option value="routine-consult">Routine Appointment</option>
+    <option value="specialized-consult">Specialized Appointment</option>
+    <option value="surgery">Surgery</option>
+    <option value="home-consult">Home Consultation</option>
+    <option value="online-consult">On-line Appointment</option>
+    <option value="urgency-consult">Emergency Appointment</option>
+  </select>
+
+  <br><br>
+
+  <label for="price">Appointment Price:</label>
+  <input type="text" id="price" name="price" readonly>
+
+  <br><br>
+
+  <label for="payment-method">Payment method:</label>
+  <select id="payment-method" name="payment-method">
+    <option value="">Select a payment method</option>
+    <option value="credit-card">Credit Card</option>
+    <option value="debit-card">Debit Card</option>
+    <option value="cash">Money</option>
+  </select>
+
+        <p>Patient's information for appointment:</p>
+        <textarea id="message" name="message" rows="5" placeholder="Type here the patient's information for appointment"></textarea>
+
+        <input type="submit" onclick="return confirm('Do you really wish to schedule this appointment with the selected doctor?')" value="Schedule">
+        <input type="reset" value="Reset">
+      </form>
+
+    
+      <table>
+        <caption style="font-size: 20px;">Price Table</caption>
+        <thead>
+          <tr>
+            <th>Appointment Type</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Routine Appointment</td>
+            <td>$ 100,00</td>
+          </tr>
+          <tr>
+            <td>Specialized Appointment</td>
+            <td>$ 200,00</td>
+          </tr>
+          <tr>
+            <td>Surgery</td>
+            <td>$ 500,00</td>
+          </tr>
+          <tr>
+            <td>Home Consultation</td>
+            <td>$ 150,00</td>
+          </tr>
+          <tr>
+            <td>On-line Appointment</td>
+            <td>$ 80,00</td>
+          </tr>
+          <tr>
+            <td>Emergency Appointment</td>
+            <td>$ 300,00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="wrapper">
+        <h2>Our Team</h2>
+      </div>
+
+      <section class="doctors">  
+        <div class="doctor">
+          <img src="images/maleDoctor.jpg" alt="Dr. Smith">
+          <h3>Dr. Richie Smith</h3>
+          <p>Dr. Richie Smith is an experienced doctor who has worked in the field for over 20 years. He specializes in surgeries and has a record of success in all of his procedures.</p>
+        </div>
+        <article class="doctor">
+          <img src="images/maleDoctor2.jpg" alt="Dr. Carlos">
+          <h3>Dr. Carlos Vasquéz</h3>
+          <p>Dr. Carlos Vasquéz is an experienced doctor who has been working in the field for over 20 years. He specializes in general practice and has a record of success in all of his procedures.</p>
+        </article>
+        <article class="doctor">
+          <img src="images/femaleDoctor.jpg" alt="Dr. Fernanda">
+          <h3>Dra. Fernanda Monteiro</h3>
+          <p>Dr. Fernanda Monteiro is an experienced doctor who has worked in the field for over 20 years. She specializes in dermatology and has a track record of success in all of her procedures.</p>
+        </article>
+        <article class="doctor">
+          <img src="images/femaleDoctor2.jpg" alt="Dr. Gleyde">
+          <h3>Dra. Gleyde Santos</h3>
+          <p>Dr. Gleyde Santos is an experienced doctor who has worked in the field for over 20 years. She specializes in cardiology and has a track record of success in all of her procedures.</p>
+        </article>
+      </div>
+      <section class="comments">
+        <h2>Comments and Reviews</h2>
+        <div class="comment">
+          <img src="images/malePatient.jpg" alt="User image 1">
+          <div class="info">
+            <h3>João Silva</h3>
+            <p class="com-time">August 20, 2022</p>
+            <p class="com-message">Excellent service. Very attentive doctors and nurses.</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="images/femalePatient.jpg" alt="User image 2">
+          <div class="info">
+            <h3>Maria Santos</h3>
+            <p class="com-time">September 15, 2022</p>
+            <p class="com-message">Great service, highly recommend.</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="empty star">&#9734;</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="images/malePatient2.jpg" alt="User image 3">
+          <div class="info">
+            <h3>Carlos Reddick</h3>
+            <p class="com-time">October 5, 2022</p>
+            <p class="com-message">Very competent and helpful doctors.</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="images/femalePatient2.jpg" alt="User image 4">
+          <div class="info">
+            <h3>Jeane Santana</h3>
+            <p class="com-time">January 13, 2023</p>
+            <p class="com-message">Great service, those responsible are to be congratulated.</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="empty star">&#9734;</span>
+            </div>
+          </div>
+        </div>
+        <div class="comment">
+          <img src="images/malePatient3.jpg" alt="User image 5">
+          <div class="info">
+            <h3>Douglas Pereira</h3>
+            <p class="com-time">March 2, 2023</p>
+            <p class="com-message">I loved the medical staff! I'll definitely come back again.</p>
+            <div class="stars">
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+              <span class="star">&#9733;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+        <footer>
+          <div class="container">
+            <div class="footer-content">
+              <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Address: Av. Paulista, 1234 - São Paulo/SP</p>
+                <p><i class="fas fa-phone"></i> Telephone: (11) 1234-5678</p>
+                <div class="social-media">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <p class="social-media-text">Facebook</p>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <p class="social-media-text">Twitter</p>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <p class="social-media-text">Instagram</p>
+                </div>
+              </div>
+              <div class="copyright">
+                <p>© Medical - All Rights Reserved</p>
+              </div>
+            </div>
+        </div>
+        </footer>
+        <script src="index.js"></script>
+        </body>
+        </html>  
+
+  </body>
+  </html>

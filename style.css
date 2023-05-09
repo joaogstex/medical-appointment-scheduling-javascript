@@ -1,0 +1,326 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+  
+}
+
+header {
+  background-color: #0077b6;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+h1 {
+  margin: 0;
+}
+
+form {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input[type=date], input[type=time] {
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+width: 100%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+margin-bottom: 20px;
+font-size: 16px;
+}
+
+input[type=submit], input[type="reset"] {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover, input[type="reset"]:hover {
+  background-color: #005f8b;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #0077b6;
+  color: #fff;
+}
+
+.wrapper {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2rem;
+}
+
+h2 {
+font-size: 1.5rem;
+text-align: center;
+}
+
+.doctors {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+margin-left: 3%;
+max-width: 1000px;
+margin: 0 auto;
+padding: 0 2rem;
+padding-bottom: 50px;
+}
+
+.doctor {
+background-color: #fff;
+padding: 1rem;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+flex-basis: calc(33.33% - 2rem);
+text-align: center;
+background-color: #797EF6;
+align-self: stretch;
+}
+
+.doctor img {
+border-radius: 50%;
+max-width: 100%;
+height: auto;
+}
+
+.doctor h3 {
+margin-top: 1rem;
+font-size: 1.2rem;
+color: white;
+}
+
+.doctor p {
+margin-top: 0.5rem;
+font-size: 0.9rem;
+color: white;
+}
+
+.page-wrap {
+min-height: 100%;
+margin-bottom: -200px; 
+}
+
+.page-wrap:after {
+content: "";
+display: block;
+}
+
+footer, .page-wrap:after {
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px;
+height: 200px;
+
+}
+
+.container {
+max-width: 960px;
+margin: 0 auto;
+}
+
+.row {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.col-md-4 {
+flex: 0 0 33.333333%;
+max-width: 33.333333%;
+}
+
+h4 {
+font-size: 18px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+::-webkit-scrollbar {
+width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+background-color: #f5f5f5; 
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #ccc;
+border-radius: 5px; 
+}
+
+.comments {
+padding: 50px;
+background-color: #f8f8f8;
+}
+
+.comment {
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.comment img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+margin-right: 20px;
+}
+
+.comment .info {
+flex: 1;
+}
+
+.comment h3 {
+margin-top: 0;
+margin-bottom: 5px;
+}
+
+.comment .com-time {
+font-size: 14px;
+color: #888;
+margin-bottom: 15px;
+}
+
+.comment .com-message {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 20px;
+}
+
+.stars {
+display: inline-block;
+font-size: 24px;
+}
+
+.star {
+color: #ffbf00;
+}
+
+.empty.vazia {
+color: #ccc;
+}
+
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+  form, table {
+    max-width: 750px;
+  }
+}
+
+/* Desktops */
+@media only screen and (min-width: 1024px) {
+  form, table {
+    max-width: 950px;
+  }
+}
+
+@media (max-width: 768px) {
+.doctors {
+max-width: 100%;
+}
+}
+@media screen and (max-width: 600px) {
+.doctor {
+flex-basis: 100%;
+}
+}
+
+@media screen and (max-width: 768px) {
+h2 {
+font-size: 1.2rem;
+}
+.doctor {
+flex-basis: calc(50% - 1rem);
+}
+}
+
+@media only screen and (max-width: 768px) {
+footer {
+font-size: 0.8rem;
+}
+}
+
+@media (max-width: 768px) {
+.comentario img {
+width: 60px;
+height: 60px;
+margin-right: 10px;
+}
+
+.comentario .info {
+flex: none;
+width: 70%;
+}
+
+.comentario .mensagem {
+font-size: 14px;
+}
+
+.formulario input,
+.formulario textarea {
+width: 90%;
+}
+
+.formulario button {
+width: 100%;
+}
+}
