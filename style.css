@@ -306,21 +306,12 @@ height: 60px;
 margin-right: 10px;
 }
 
-.comentario .info {
+.comment .info {
 flex: none;
 width: 70%;
 }
 
-.comentario .mensagem {
+.comment .com-message {
 font-size: 14px;
-}
-
-.formulario input,
-.formulario textarea {
-width: 90%;
-}
-
-.formulario button {
-width: 100%;
 }
 }
